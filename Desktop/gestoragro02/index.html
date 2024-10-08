@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diário de Campo Digital</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Diário de Campo Digital</h1>
+    <form id="entryForm">
+      <label for="date">Data:</label>
+      <input type="date" id="date" required>
+      
+      <label for="location">Local:</label>
+      <input type="text" id="location" placeholder="Digite o local" required>
+      
+      <label for="area">Área (em hectares):</label>
+      <input type="number" id="area" placeholder="Ex: 10" required>
+      
+      <label for="activity">Atividade:</label>
+      <select id="activity" required>
+        <option value="irrigação">Irrigação</option>
+        <option value="defensivo">Aplicação de Defensivos</option>
+        <option value="observação">Observação de Pragas</option>
+        <option value="observação">Plantio de Mudas</option>
+        <option value="observação">Projetos Estruturais</option>
+        <option value="observação">Manejo de Produtos</option>
+        <option value="outros">Outros</option>
+      </select>
+      
+      <label for="materials">Materiais Utilizados:</label>
+      <input type="text" id="materials" placeholder="Ex: Fertilizante, Herbicida" required>
+      
+      <label for="photos">Fotos (até 5):</label>
+      <input type="file" id="photos" multiple accept="image/*" required>
+      
+      <button type="submit">Adicionar Entrada</button>
+    </form>
+    
+    <h2>Entradas de Campo</h2>
+    <div id="entries"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
